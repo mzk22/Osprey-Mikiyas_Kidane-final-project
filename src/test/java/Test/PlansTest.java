@@ -33,7 +33,7 @@ public class PlansTest extends Base_UI_Test {
         loginPage.validCSRLogin();
         clickElement(userProfilePage.plansBtn);
         Assert.assertEquals(countPlanRows
-                (),4,"The number of rows is incorrect, there should be 4 rows");
+                (),5,"The number of rows is incorrect, there should be 5 rows");
     }
 
 

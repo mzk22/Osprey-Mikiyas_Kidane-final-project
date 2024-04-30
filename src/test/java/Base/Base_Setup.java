@@ -26,6 +26,7 @@ public class Base_Setup {
             FileInputStream fileInputStream = new FileInputStream(PropertyFile);
             properties = new Properties();
             properties.load(fileInputStream);
+            // this initializes a Properties object with key-value pairs from a properties file located in the project's directory structure
         }
         catch(IOException ex){
             throw new RuntimeException("Config file is not accessible "+ ex.getMessage());

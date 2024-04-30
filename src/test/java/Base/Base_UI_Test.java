@@ -23,7 +23,9 @@ public class Base_UI_Test extends Selenium_Utilities {
 
     @BeforeMethod
     public void beginTestMethod(){
+        //super allows you to use methods from the parent class
         super.OpenBrowser();
+        //instantiates objects of the page classes and assigns them to variables
         homePage = new Home_Page();
         loginPage = new Login_Page();
         createAccountPage = new Create_Account_Page();
@@ -36,7 +38,6 @@ public class Base_UI_Test extends Selenium_Utilities {
         if(result.getStatus()==ITestResult.FAILURE){
             TakesScreenshot screenShot = (TakesScreenshot) getDriver();
             String screenshot = screenShot.getScreenshotAs(OutputType.BASE64);
-
             ExtentTestManager.getTest().fail("Screenshot Failed",
                     MediaEntityBuilder.createScreenCaptureFromBase64String
                             (screenshot).build());
